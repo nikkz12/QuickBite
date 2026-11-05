@@ -1,0 +1,525 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fffaf4;
+    color: #302820;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    height: 75px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 12px #0000000b;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.logo span, footer span {
+    color: #f07835;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #51483f;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #f07835;
+}
+
+.cart-button {
+    background: #fff0e5;
+    border: none;
+    color: #d95d20;
+    padding: 12px 18px;
+    border-radius: 9px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    margin: 35px auto;
+    max-width: 1100px;
+    min-height: 370px;
+    padding: 55px 65px;
+    background: #ffead9;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.tagline, .tag {
+    color: #e36c2c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 57px);
+    line-height: 1.12;
+    margin: 17px 0;
+}
+
+.hero-content p {
+    max-width: 400px;
+    color: #77685b;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.order-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 23px;
+    background: #f07835;
+    color: white;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.order-button:hover {
+    background: #d95d20;
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.food-emoji {
+    font-size: 150px;
+    filter: drop-shadow(0 15px 12px #b46d3b40);
+}
+
+.hero-image span {
+    color: #8c6048;
+    font-size: 12px;
+}
+
+/* MENU */
+
+.menu-section, .cart-section {
+    max-width: 1100px;
+    margin: 65px auto;
+    padding: 0 10px;
+}
+
+.section-heading h2 {
+    font-size: 27px;
+    margin-top: 9px;
+}
+
+.search-box {
+    margin: 25px 0;
+    display: flex;
+    background: white;
+    border: 1px solid #eee1d5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 16px;
+    font-size: 14px;
+}
+
+.search-box button {
+    border: none;
+    background: #f07835;
+    color: white;
+    padding: 0 22px;
+    cursor: pointer;
+}
+
+.categories {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.category {
+    border: 1px solid #eadfd4;
+    background: white;
+    color: #66594d;
+    border-radius: 25px;
+    padding: 11px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.category.active, .category:hover {
+    background: #f07835;
+    color: white;
+    border-color: #f07835;
+}
+
+/* FOOD CARDS */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #f0e8df;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px #65401b12;
+}
+
+.food-image {
+    height: 165px;
+    background: #fff0e5;
+    display: grid;
+    place-items: center;
+    font-size: 85px;
+}
+
+.food-details {
+    padding: 19px;
+}
+
+.food-details h3 {
+    font-size: 17px;
+}
+
+.food-details p {
+    color: #8b8075;
+    font-size: 12px;
+    margin: 9px 0 16px;
+    line-height: 1.6;
+}
+
+.food-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 17px;
+    font-weight: 800;
+    color: #e56d2c;
+}
+
+.add-button {
+    background: #f07835;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.add-button:hover {
+    background: #d95d20;
+}
+
+.no-results {
+    color: #8b8075;
+    padding: 25px 0;
+    grid-column: 1 / -1;
+}
+
+/* CART */
+
+.cart-section {
+    background: white;
+    padding: 35px;
+    border-radius: 17px;
+    border: 1px solid #f0e8df;
+}
+
+.empty-cart {
+    color: #999;
+    margin: 30px 0;
+    font-size: 14px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee9e3;
+}
+
+.cart-item h4 {
+    font-size: 14px;
+}
+
+.cart-item small {
+    color: #8b8075;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity button {
+    border: none;
+    background: #fff0e5;
+    color: #d95d20;
+    padding: 7px 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.remove-button {
+    border: none;
+    background: transparent;
+    color: #d94a4a;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.cart-total {
+    max-width: 350px;
+    margin: 25px 0 0 auto;
+}
+
+.cart-total p, .cart-total h3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.cart-total p {
+    color: #82766c;
+    font-size: 14px;
+}
+
+.cart-total h3 {
+    border-top: 1px solid #eee1d5;
+    padding-top: 18px;
+    font-size: 20px;
+}
+
+.cart-total button, #checkoutForm button,
+.confirmation button {
+    width: 100%;
+    background: #f07835;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.cart-total button:disabled {
+    background: #c8c0b9;
+    cursor: not-allowed;
+}
+
+/* CHECKOUT */
+
+.checkout-section, .confirmation {
+    max-width: 550px;
+    margin: 45px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    border: 1px solid #f0e8df;
+}
+
+.checkout-section h2, .confirmation h2 {
+    margin-bottom: 23px;
+}
+
+#checkoutForm label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 15px 0 8px;
+}
+
+#checkoutForm input, #checkoutForm textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e5d9ce;
+    border-radius: 8px;
+    font-family: inherit;
+    outline: none;
+}
+
+#checkoutForm input:focus, #checkoutForm textarea:focus {
+    border-color: #f07835;
+}
+
+#checkoutForm textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+#checkoutForm button {
+    margin-top: 20px;
+}
+
+#checkoutForm .cancel-button {
+    background: #eee8e2;
+    color: #51483f;
+    margin-top: 10px;
+}
+
+.confirmation {
+    text-align: center;
+}
+
+.success-icon {
+    margin: 0 auto 18px;
+    background: #e1f6e9;
+    color: #248b4b;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.confirmation p {
+    color: #81756b;
+    margin: 12px 0;
+}
+
+.confirmation button {
+    margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    background: #302820;
+    color: white;
+    padding: 35px;
+}
+
+footer p {
+    color: #c3b8ad;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        margin: 20px 12px;
+        padding: 35px 25px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .food-emoji {
+        font-size: 110px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .food-image {
+        height: 120px;
+        font-size: 60px;
+    }
+
+    .food-details {
+        padding: 12px;
+    }
+
+    .food-details h3 {
+        font-size: 14px;
+    }
+
+    .add-button {
+        padding: 9px;
+        font-size: 11px;
+    }
+
+    .cart-section {
+        margin: 40px 12px;
+        padding: 20px;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+
+    .cart-total {
+        max-width: 100%;
+    }
+
+    .checkout-section, .confirmation {
+        margin: 25px 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+}
